@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+nav {
+    background: linear-gradient( black, gray);
+    width: 94.9vw;
+    display: inline-flex;
+    padding: 2vw ;
+    color: white;
+}
+nav p {
+    margin-left: 5vw;
+}
+nav :nth-child(1){
+    background-color: white;
+    padding: 6px 20px;
+    color: black;
+}
+.bg1 {
+    background-image: url(iStock-1157332392.jpg);
+    height: 40vw;
+    background-repeat:round;
+    margin: 0;
+}
+.img3 img {
+    width: 28vw;
+    height: 30vw;
+    margin: 20px 34px;
+    
+}
+.bottom {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom p {
+    width: 45vw;
+    padding-top: 250px;
+    padding-left: 20px;
+}
+.bottom img {
+    width: 45vw;
+    padding-top: 30px;
+    padding-right: 90px;
+    padding-bottom: 10px;
+}
