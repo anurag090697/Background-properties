@@ -187,8 +187,8 @@ body {
     rgba(79, 208, 177, 0.6722338593640581) 100%
   );
   display: grid;
-  grid-template-columns:10% 20% 20% 20% 20%;
-  
+  grid-template-columns: 10% 20% 20% 20% 20%;
+  text-align: -webkit-center;
 }
 .titles {
   color: rgb(139, 197, 255);
@@ -199,6 +199,7 @@ body {
   align-items: center; */
   padding: 1% 2%;
   background-color: rgba(221, 0, 0, 0.558);
+  text-align: -webkit-center;
 }
 .exactTime {
   text-align: center;
@@ -217,4 +218,5 @@ body {
   /* justify-content:space-between; */
   gap: 7%;
   align-items: center;
+  margin-left: 25%;
 }

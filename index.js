@@ -38,22 +38,22 @@ function leaderboardDisplay(arr) {
 
   let tym = new Date();
   let str = tym.toDateString() + " " + tym.toLocaleTimeString();
-  str = str.substring(3,str.length);
-//   console.log(str);
+  str = str.substring(3, str.length);
+  //   console.log(str);
 
   arr.forEach((item, index) => {
     let profileDiv = document.createElement("div");
     profileDiv.classList.add("profile");
 
     let rankNo = document.createElement("h1");
-    if(index < 3) rankNo.innerText = "[#" + parseInt(index + 1) + "]";
+    if (index < 3) rankNo.innerText = "[#" + parseInt(index + 1) + "]";
     else rankNo.innerText = index + 1 + ".";
     profileDiv.append(rankNo);
 
     let nameTime = document.createElement("div");
     nameTime.classList.add("exactTime");
     let name = document.createElement("h2");
-    name.innerText = item.fullName;
+    name.innerText = item.fullName.toUpperCase();
     nameTime.append(name);
     let tmm = document.createElement("p");
     tmm.innerText = str;
@@ -62,11 +62,11 @@ function leaderboardDisplay(arr) {
     profileDiv.append(nameTime);
 
     let userName = document.createElement("h2");
-    userName.innerText = item.username;
+    userName.innerText = item.username.toUpperCase();
     profileDiv.append(userName);
 
     let desh = document.createElement("h2");
-    desh.innerText = item.country;
+    desh.innerText = item.country.toUpperCase();
     profileDiv.append(desh);
 
     let scoreData = document.createElement("div");
@@ -121,7 +121,12 @@ window.addEventListener("load", () => {
     let country = document.getElementById("country").value;
     let score = parseInt(document.getElementById("score").value);
     // let addBtn = document.getElementById("addBtn");
-    if (fName === "" || uName === "" || country === "" || !Number.isInteger(score)) {
+    if (
+      fName === "" ||
+      uName === "" ||
+      country === "" ||
+      !Number.isInteger(score)
+    ) {
       alert("FILL ALL THE INFORMATIONS CORRECTLY");
     } else {
       addPlayer(fName, uName, country, score);
@@ -132,7 +137,7 @@ window.addEventListener("load", () => {
 function removeData(index) {
   players.splice(index, 1);
   leaderboardDisplay(players);
-//   console.log("delete");
+  //   console.log("delete");
 }
 function add5(index) {
   players[index]["score"] += 5;
